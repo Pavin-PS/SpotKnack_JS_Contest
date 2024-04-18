@@ -13,7 +13,7 @@
             padding: 0;
         }
         body{
-            background-color: #fbe9d0;
+            background-color: white;
             font-family: "Platypi", cursive;
             font-optical-sizing: auto;
             font-weight:200;
@@ -21,48 +21,64 @@
         }
         input{
             width: 25vw;
-            background-color: #fbe9d0;
+            background-color: white;
             padding: 5px;
             border: none;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid #001e20;
             font-size: larger;
+            
         }
 
         button{
-            border-radius: 60px;
-            border: 1px solid black ;
-            background-color: black;
-            color: #fbe9d0;
+            border-radius: 10px;
+            
+            border: 1px solid #001e20 ;
+            background-color: #001e20;
+            color: white;
         }
+        #er1{
+            color: red;
+            margin: 5%;
+        }
+        
     </style>
    
 </head>
 <body>
     <div style="width: 100vw; display: flex;">
-        <div style="width: 30%; height: 15vh; padding: 42.5vh 10vw; text-align: center; font-size: 120%; color: bisque; background-image: url('./assets/images/pexels-pixabay-531880.jpg');">
+        <div style="width: 30%; height: 15vh; padding: 42.5vh 10vw; text-align: center; font-size: 120%; color: bisque; background-image: url('./assets/images/abstract-digital-grid-black-background.jpg'); background-size: cover;">
             <h1>Contact Manager</h1>
             <hr style="height: 5px; background-color: aliceblue;">
             <h3>ADMIN LOGIN</h3>
         </div>
-        
+        <div>
+            
+
             <form method="post" onsubmit="return find()" style="height: 20vh; justify-content: space-evenly; display: flex; flex-direction: column; margin-left: 2%; margin-top: 40vh;">
-                <input type="text" name="" id="uname" placeholder="Username/Email"><br>
-                <input type="text" name="" id="pass" placeholder="Password"><br>
-                <button type="submit" style="width: 60px; padding: 10px; text-align: center;">Submit</button>
+                <p id="er1" ></p>
+                <input type="text" name="uname" id="uname" placeholder="Username/Email"><br>
+                <input type="text" name="pass" id="pass" placeholder="Password"><br>
+                <button type="submit" style="width: 5vw;text-align: center;padding: 10px 0px;">SUBMIT</button>
             </form>
         
+        </div>
+            
     </div>
 </body>
 <script>
-    let uname = document.getElementById('uname').value;
-    let pass = document.getElementById('pass').value;
+    
 
     function find(){
-        if(uname == "admin@123" && pass == "pavin"){
-            window.location.href = "www.google.com";
+        let uname = document.getElementById("uname").value;
+        let pass = document.getElementById("pass").value;
+        if(uname == "admin@123" && pass == "admin#123"){
+            
+            window.location.href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loc_href";
+            return true;
         }
         else{
-            alert("Password or Username is wrong");
+            document.getElementById("er1").innerHTML = "&excl; incorrect Email/Password"
+            return false;
         }
     }
     
