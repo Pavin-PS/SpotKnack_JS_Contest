@@ -54,11 +54,11 @@
         <div>
             
 
-            <form method="post" onsubmit="return find()" style="height: 20vh; justify-content: space-evenly; display: flex; flex-direction: column; margin-left: 2%; margin-top: 40vh;">
-                <p id="er1" ></p>
+            <form method="post" style="height: 20vh; justify-content: space-evenly; display: flex; flex-direction: column; margin-left: 2%; margin-top: 40vh;">
+                <p id="er1" > </p>
                 <input type="text" name="uname" id="uname" placeholder="Username/Email"><br>
                 <input type="text" name="pass" id="pass" placeholder="Password"><br>
-                <button type="submit" style="width: 5vw;text-align: center;padding: 10px 0px;">SUBMIT</button>
+                <button type="submit" onclick="find()" style="width: 5vw;text-align: center;padding: 10px 0px;">SUBMIT</button>
             </form>
         
         </div>
@@ -73,12 +73,12 @@
         let pass = document.getElementById("pass").value;
         if(uname == "admin@123" && pass == "admin#123"){
             
-            window.location.href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loc_href";
-            return true;
+            window.location.replace("./pages/contact.html")
+            
         }
         else{
             document.getElementById("er1").innerHTML = "&excl; incorrect Email/Password"
-            return false;
+            return ;
         }
     }
     
