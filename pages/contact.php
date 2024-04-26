@@ -1,3 +1,31 @@
+<?php
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $num = $_POST['num'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $data = array(
+        'fname'=> $fname,
+        'lanme'=> $lname,
+        'Mobile Number' => $num,
+        'Email'=> $email,
+        'age'=> $age
+    );
+
+    $jsonFilePath = 'data.json';
+
+    if(file_exists($jsonFilePath)){
+        $existingData = json_decode(file_get_contents($jsonFilePath), true);
+
+        $existingData[] = $data;
+    }else{
+        $existingData = array($data);
+    }
+    $jsonData = json_encode($existingData, JSON_PRETTY_PRINT);
+    file_put_contents($jsonFilePath, $jsonData);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,13 +73,13 @@
         </div>
       </nav>
       <div style="width: 40vw; background-color: #27262d; border-radius: 20px;margin: 18vh 30vw; padding: 20px; align-items: center;">
-        <form action="">
+        <form method="post">
             <div style="width: 100%;display: flex; flex-direction: column; width: 20vw; margin-left: 20%;">
-                <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="number" placeholder="Mobile Number">
-            <input type="email" placeholder="Email ID">
-            <input type="number" placeholder="Age">
+                <input type="text" name="fname" placeholder="First Name">
+            <input type="text" name="lname" placeholder="Last Name">
+            <input type="number" name="num" placeholder="Mobile Number">
+            <input type="email" name="email" placeholder="Email ID">
+            <input type="number" name="age" placeholder="Age">
             </div>
             <div style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 10%;"> 
             <button type="submit" class="btn btn-success">Add Contact</button>
