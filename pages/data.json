@@ -1,13 +1,9 @@
 [
     {
-        "fname": "Pavin",
-        "lanme": "P S"
-    },
-    {
-        "fname": "Pavin",
-        "lanme": "P S",
-        "Mobile Number": "7402696948",
-        "Email": "info.pavinps@gmail.com",
-        "age": "21"
+        "fname": "Selvaraj",
+        "lname": "P S",
+        "Mobile": "123",
+        "Email": "selva@gmail.com",
+        "age": "23"
     }
 ]

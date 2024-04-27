@@ -7,8 +7,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $age = $_POST['age'];
     $data = array(
         'fname'=> $fname,
-        'lanme'=> $lname,
-        'Mobile Number' => $num,
+        'lname'=> $lname,
+        'Mobile' => $num,
         'Email'=> $email,
         'age'=> $age
     );
