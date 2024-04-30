@@ -61,5 +61,12 @@
         "Mobile": "1234",
         "Email": "12345678@gmail.com",
         "age": "12"
+    },
+    {
+        "fname": "Pavin",
+        "lname": "Parthiban",
+        "Mobile": "1123",
+        "Email": "pavin.20ei@kct.ac.in",
+        "age": "33"
     }
 ]
