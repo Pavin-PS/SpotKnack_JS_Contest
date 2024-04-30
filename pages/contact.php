@@ -41,6 +41,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         body{
             width: 100vw;
             height: 100vh;
+            overflow-x: hidden;
             background: linear-gradient(to bottom right,#d238a4, #4c25b0);
         }
         input{
@@ -51,6 +52,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             width: 100%;
             margin: 5%;
         }
+        
     </style>
 </head>
 <body>
@@ -72,7 +74,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
           </div>
         </div>
       </nav>
-      <div style="width: 40vw; background-color: #27262d; border-radius: 20px;margin: 18vh 30vw; padding: 20px; align-items: center;">
+    
+     <div style="width: 40vw; background-color: #27262d; border-radius: 20px;margin: 18vh 10vw; padding: 20px; align-items: center;">
         <form method="post">
             <div style="width: 100%;display: flex; flex-direction: column; width: 20vw; margin-left: 20%;">
                 <input type="text" name="fname" placeholder="First Name">
@@ -82,11 +85,12 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             <input type="number" name="age" placeholder="Age">
             </div>
             <div style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 10%;"> 
-            <button type="submit" class="btn btn-success">Add Contact</button>
+            <button type="submit" onClick="find()" class="btn btn-success">Add Contact</button>
             <button type="reset" class="btn btn-danger">Clear</button>
             </div>
         </form>
       </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
