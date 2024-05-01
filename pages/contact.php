@@ -1,10 +1,10 @@
 <?php
 if($_SERVER['REQUEST_METHOD']==='POST'){
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $num = $_POST['num'];
-    $email = $_POST['email'];
-    $age = $_POST['age'];
+    $fname = $_POST['finame'];
+    $lname = $_POST['liname'];
+    $num = $_POST['inum'];
+    $email = $_POST['iemail'];
+    $age = $_POST['iage'];
     $data = array(
         'fname'=> $fname,
         'lname'=> $lname,
@@ -78,11 +78,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
      <div style="width: 40vw; background-color: #27262d; border-radius: 20px;margin: 18vh 10vw; padding: 20px; align-items: center;">
         <form method="post">
             <div style="width: 100%;display: flex; flex-direction: column; width: 20vw; margin-left: 20%;">
-                <input type="text" name="fname" placeholder="First Name">
-            <input type="text" name="lname" placeholder="Last Name">
-            <input type="number" name="num" placeholder="Mobile Number">
-            <input type="email" name="email" placeholder="Email ID">
-            <input type="number" name="age" placeholder="Age">
+                <input type="text" name="finame" id=""fname placeholder="First Name">
+            <input type="text" name="liname" id="lname" placeholder="Last Name">
+            <input type="number" name="inum" id="num" placeholder="Mobile Number">
+            <input type="email" name="iemail" id="email" placeholder="Email ID">
+            <input type="number" name="iage" id="age" placeholder="Age">
             </div>
             <div style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 10%;"> 
             <button type="submit" onClick="find()" class="btn btn-success">Add Contact</button>
