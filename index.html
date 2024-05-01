@@ -54,7 +54,7 @@
         <div>
             
 
-            <form method="post" style="height: 20vh; justify-content: space-evenly; display: flex; flex-direction: column; margin-left: 2%; margin-top: 40vh;">
+            <form method="post" action="./pages/contact.php" style="height: 20vh; justify-content: space-evenly; display: flex; flex-direction: column; margin-left: 2%; margin-top: 40vh;">
                 <p id="er1" > </p>
                 <input type="text" name="uname" id="uname" placeholder="Username/Email"><br>
                 <input type="text" name="pass" id="pass" placeholder="Password"><br>
@@ -73,12 +73,12 @@
         let pass = document.getElementById("pass").value;
         if(uname == "admin@123" && pass == "admin#123"){
             
-            window.location="./pages/contact.php"
+            return true;
             
         }
         else{
             document.getElementById("er1").innerHTML = "&excl; incorrect Email/Password"
-            return ;
+            return false;
         }
     }
     
