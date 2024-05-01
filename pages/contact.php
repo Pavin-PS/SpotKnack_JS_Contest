@@ -1,10 +1,10 @@
 <?php
-if($_SERVER['REQUEST_METHOD']==='POST'){
-    $fname = $_POST['finame'];
-    $lname = $_POST['liname'];
-    $num = $_POST['inum'];
-    $email = $_POST['iemail'];
-    $age = $_POST['iage'];
+if($_SERVER['REQUEST_METHOD']==='GET'){
+    $fname = $_GET['finame'];
+    $lname = $_GET['liname'];
+    $num = $_GET['inum'];
+    $email = $_GET['iemail'];
+    $age = $_GET['iage'];
     $data = array(
         'fname'=> $fname,
         'lname'=> $lname,
